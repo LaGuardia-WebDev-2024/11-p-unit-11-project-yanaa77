@@ -26,19 +26,22 @@ Select ONE Additional
     <button id="mem3-button">Memory #3</button>
     <h1>My Top 3 Memories of <span>This Year</span></h1>
     <ol>
-      <li>
-        <h3 id="mem1">Memory #1</h3>
-        <p>More about this memory.</p>
+      <li class="memory">
+        <h3 id="mem1">new year's eve</h3>
+        <p>Celebrating with friends</p>
+        <img src="  " width="200"> 
       </li>
 
-      <li>
+      <li class="memory"> 
         <h3 id="mem2">Memory #2</h3>
         <p>More about this memory.</p>
+        <img src="  " width="200">  
       </li>
 
-      <li>
+      <li class="memory"> 
         <h3 id="mem3">Memory #3</h3>
         <p>More about this memory</p>
+        <img src="  " width="200">    
       </li>
     </ol>
 
@@ -47,18 +50,20 @@ Select ONE Additional
 
       // ======================== Button #1
       $("#mem1-button").click(function () {
+      $("#mem1").slideUp(200).slideDown(200);
         $("#mem1").css("color", "purple");
       });
 
       // ======================== Button #2
       $("#mem2-button").click(function () {
-        $("#mem2").css("color", "blue");
+        $(".memory").toggleClass("highlight"); 
       });
 
       // ======================== Button #3
       $("#mem3-button").click(function () {
         $("#mem3").css("color", "green");
         $("#mem3").text("Coding Parties! 🎉");
+        $("h3").fadeOut(200).fadeIn(200); // element selector
       });
 
 
