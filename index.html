@@ -8,9 +8,9 @@ Requirements
 Select ONE Additional 
 [ no ] Feature 1 - Use .hide() & .show() method
 [ no ] Feature 2 - Use .addClass() method
-[ no ] Feature 3 - Use .slideDown() method
-[ no ] Feature 4 - Use .mouseover() method
-[ no ] Feature 5 - Use .fadeIn() method
+[ no ] Feature 3 - Use .slideDown() method   Yes
+[ no ] Feature 4 - Use .mouseover() method   Yes
+[ no ] Feature 5 - Use .fadeIn() method  Yes
 -->
 
 <!DOCTYPE html>
@@ -24,24 +24,26 @@ Select ONE Additional
     <button id="mem1-button">Memory #1</button>
     <button id="mem2-button">Memory #2</button>
     <button id="mem3-button">Memory #3</button>
-    <h1>My top 3 favoite <span>animals</span></h1>
+    <h1>My top 3 favorite <span>animals</span></h1>
     <ol>
       <li class="memory">
-        <h3 id="mem1">cats</h3>
-        <p>Celebrating with friends</p>
-        <img src="  " width="200"> 
+        <h3 id="mem1">...</h3>
+        <p>cats!</p>
+        <img src="cats/cat-3_d15c0254-8ccd-4beb-bc3e-1c988bcc5d51.webp" 
+        width="380"> 
       </li>
 
       <li class="memory"> 
-        <h3 id="mem2">Memory #2</h3>
-        <p>More about this memory.</p>
-        <img src="  " width="200">  
+        <h3 id="mem2">...</h3>
+        <p>Owls!</p>
+        <img src="owls/0b370cf9ab29342a503538fc763109c2.jpg"  
+        width="300">  
       </li>
 
       <li class="memory"> 
-        <h3 id="mem3">Memory #3</h3>
-        <p>More about this memory</p>
-        <img src="  " width="200">    
+        <h3 id="mem3">...</h3>
+        <p>Foxes!</p>
+        <img src="foxes/00531262943c3844f033b2a39c9a2be7.jpg" width="300">    
       </li> 
     </ol>
 
@@ -52,20 +54,35 @@ Select ONE Additional
       $("#mem1-button").click(function () {
       $("#mem1").slideUp(200).slideDown(200);
         $("#mem1").css("color", "purple");
+        let img = $("#mem1").siblings("img");
+  img.hide().slideDown(400).fadeTo(400, 1);
       });
 
       // ======================== Button #2
       $("#mem2-button").click(function () {
         $(".memory").toggleClass("highlight"); 
+        let img = $("#mem2").siblings("img");
+  img.hide().slideDown(400).fadeTo(400, 1);
+
       });
 
       // ======================== Button #3
       $("#mem3-button").click(function () {
         $("#mem3").css("color", "green");
-        $("#mem3").text("Memory #3");
+        $("#mem3").text("...");
         $("h3").fadeOut(200).fadeIn(200); // element selector
+        let img = $("#mem3").siblings("img");
+  img.hide().slideDown(400).fadeTo(400, 1);
+
       });
 
+      $(".memory").mouseover(function () {
+  $(this).css("background-color", "lightblue");
+});
+
+$(".memory").mouseout(function () {
+  $(this).css("background-color", "");
+});
 
     </script>
   </body>

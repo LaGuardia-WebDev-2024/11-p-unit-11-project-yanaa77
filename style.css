@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Delius&family=Poetsen+One&display=swap");
+my css now @import url("https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Delius&family=Poetsen+One&display=swap");
 
 /* ======================== CSS Rule #1 */
 html {
@@ -11,8 +11,18 @@ h1 {
   font-family: "Poetsen One", sans-serif;
 }
 
+.memory {
+  margin-bottom: 20px;
+  padding-left: 10px;
+  border-left: 5px solid #7cc6fe;
+} 
+
 .highlight {
-  background-color: rgb(161, 237, 227);
+  background-color: rgb(204, 239, 234);
   transform: scale(1.05);
   transition: 0.3s;
+}
+
+img {
+  display: none;
 }
